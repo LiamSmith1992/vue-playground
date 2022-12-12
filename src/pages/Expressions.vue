@@ -54,13 +54,13 @@ document.getElementById('player').innerHTML = html;</code></pre>
         &lt;img :src="player.photo" /&gt;
     &lt;/div&gt;
     &lt;div&gt;
-        &lt;span&gt;{{state.player.name}}&lt;/span&gt;
+        &lt;span&gt;{{ state.player.name }}&lt;/span&gt;
     &lt;/div&gt;
     &lt;div&gt;
-        &lt;span&gt;{{state.player.position}}&lt;/span&gt;
+        &lt;span&gt;{{ state.player.position }}&lt;/span&gt;
     &lt;/div&gt;
     &lt;div&gt;
-        &lt;span&gt;{{state.player.number}}&lt;/span&gt;
+        &lt;span&gt;{{ state.player.number }}&lt;/span&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
         <p>
@@ -77,7 +77,9 @@ document.getElementById('player').innerHTML = html;</code></pre>
           then move on to the next section.
         </p>
       </div>
-      <exercise></exercise>
+      <exercise>
+        
+      </exercise>
     </div>
   </div>
 </template>
@@ -90,7 +92,7 @@ export default {
   setup() {
     // @ts-ignore
     onMounted(() => Prism.highlightAll())
-    
+
     const state = reactive({
       val: "{{ Evaluate Javascript Code }}",
       player: {
@@ -99,8 +101,11 @@ export default {
         number: "{{ state.player.number }}",
       },
       handleEg: "{{2 + 2}}",
+
+
     });
     return {
+
       state,
     };
   },
@@ -110,4 +115,5 @@ export default {
 
 
 <style scoped>
+
 </style>
